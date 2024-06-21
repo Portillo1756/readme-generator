@@ -14,7 +14,7 @@ const questions = [
   {
     type: "input",
     name: "Description",
-    message: "Provide a description the purpose of your project.",
+    message: "Provide a description on the purpose of your project.",
    },
 
    {
@@ -63,8 +63,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.createPromptModule(questions).then((response) => {
-    console.log("Creating Professional README.mD file...");
+  inquirer.prompt(questions).then((response) => {
+    console.log("Creating Professional README.md file...");
     writeToFile("./dist/README.md", generateMarkdown({...response}));
   })
 }
