@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (licence !== "none") {
+  if (license != null) {
     return `![Github license] (https://img.shields.io/badge/license ${license} yellowgreen.svg)`;
   }
   return "";
@@ -38,34 +38,25 @@ function generateMarkdown(data) {
     * [Usage](#Usage)
     * [License](#License)
     * [Contact-Me](#Contact-Me)
-    * [Contributors](#Contributors)
     * [Testing](Testing)
 
     ## Description
 
-    ${data.Description}
+    ${data.description}
 
     ## Usage
 
-    ${data.Usage}
+    ${data.usage}
 
 
     ## License
 
-    ${data.License}
-
-    ## Contributing
-
-    ${data.Contributing}
-  
-    ## Creator
-  
-    ${data.Creator}
+    ${data.license}
 
     ## Contact-Me
-    * Name - ${data.Name}
-    * Email - ${data.Email}
-    * Github - ${data.Creator}
+    * Name - ${data.name}
+    * Email - ${data.email}
+    * Github - ${data.contributing}
     `;
 }
 
